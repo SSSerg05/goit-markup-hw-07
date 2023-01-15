@@ -96,6 +96,7 @@ ol,
     flex-wrap: nowrap;
     min-width: 115px;
  }
+
 .logo-link {
     font-family: 'Raleway', sans-serif;
     font-size: var(--fs-logo); /* 18px; */
@@ -103,12 +104,18 @@ ol,
     line-height: 1.3; /* 24 / 18 = 1.3 */
     letter-spacing: 0.03em;
 }
-.logo-dark { color: var(--color-dark); text-decoration: inherit; }
+
+.logo-dark { 
+    color: var(--color-dark); 
+    text-decoration: inherit; 
+}
+
 .logo-light {
     text-decoration: inherit; 
     color: var(--color-white); 
     margin-bottom: 16px;
 }
+
 .logo-web { 
     color: var(--color-iris);
     display: inline-block;
@@ -838,7 +845,7 @@ ol,
 /* «C4» Вёрстка выполнена относительно трёх точек перелома: 480px, 768px и 1200px. */
 
 /* Desktop */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 901px)  {
     .container { width: 1158px; } /* 15+1128+15 */
     .menu { display: block; }
     .menu-phone { display: none; }
@@ -846,7 +853,7 @@ ol,
 }
 
 /* Tablet */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
     .container { width: 798px; } /* 15+768+15 */
     .menu { display: block; }
     .menu-phone { display: none; }
