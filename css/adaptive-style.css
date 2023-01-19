@@ -95,6 +95,7 @@ ol,
     display: inline-flex;
     flex-wrap: nowrap;
     min-width: 115px;
+    margin-right: 100%;
  }
 
 .logo-link {
@@ -142,24 +143,14 @@ ol,
 
 .menu-phone {
     height: 70px;
+    margin-left: auto;
 }
 
-.btn-menu-phone .icon-cross {
-    display: none;
-}
-
-.btn-menu-phone.is-open .icon-cross {
-    display: block;
-}
-
-.btn-menu-phone.is-open .icon-menu {
-    display: none;
-}
 
 /* menu-mobile */
 .menu-toggle {
-    /* min-height: 40px;
-    min-width: 40px; */
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,7 +162,12 @@ ol,
     border: none;
     border-radius: 50%;
     outline: none;
+    outline: 1px solid red;
     fill: var(--color-dark);
+}
+
+.menu-icon {
+    fill:#2e2f42;
 }
 
 @media (min-width: 768px) {
