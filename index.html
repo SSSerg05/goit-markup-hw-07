@@ -31,14 +31,14 @@
                     </ul>
 
                     <!-- Menu for phone -->
-                    <div class="menu-phone">
+                    <div class="menu-mobile">
                         <button 
-                            class="menu-toggle js-open-menu"
+                            class="btn-menu-toggle js-open-menu"
                             type="button"    
                             aria-expanded="false"
                             aria-controls="mobile-menu" 
                             >
-                            <svg class="menu-icon"
+                            <svg class=".menu-mobile-icon" {
                                 widht="32" 
                                 height="22">
                                 <use href="./images/icons-2.svg#icon-ic-baseline-menu"></use>
@@ -600,11 +600,13 @@
 
     <!-- mobile-menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-toggle js-close-menu">
-            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path fill-rule="evenodd"
+        <button class="btn-menu-toggle js-close-menu">
+            <svg class="menu-mobile-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="8" height="8">
+                <use href="./images/icons-2.svg#icon-close"></use>
+
+                <!-- <path fill-rule="evenodd"
                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
+                    clip-rule="evenodd"></path> -->
             </svg>
         </button>
     
