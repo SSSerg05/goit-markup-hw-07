@@ -123,7 +123,10 @@ ol,
  }
 
 /* =========== Nav, menu & Contacts =========== */
-.menu { margin-left: 77px; }
+.menu { 
+    display: none;
+    margin-left: 77px; 
+}
 
 .menu-item,
 .contact-item {
@@ -141,9 +144,9 @@ ol,
     outline: none;  
 }
 
-.menu-mobile {
+/* .menu-mobile {
     display: block;
-}
+} */
 
 
 /* menu for mobile */
@@ -924,12 +927,12 @@ ol,
 
 /* «C4» Вёрстка выполнена относительно трёх точек перелома: 480px, 768px и 1200px. */
 
-/* Desktop */
-@media screen and (min-width: 901px)  {
-    .container { width: 1158px; } /* 15+1128+15 */
-    .menu { display: block; }
-    .menu-phone { display: none; }
-    .contacts { display: block; }
+/* Phone */
+@media screen and (max-width: 480px) {
+    .container { width: 458px; } /* 15+428+15 */
+    .menu { display: none; }
+    .menu-phone { display: block; }
+    .contacts { display: none; }
 }
 
 /* Tablet */
@@ -940,10 +943,11 @@ ol,
     .contacts { display: none; }
 }
 
-/* Phone */
-@media screen and (min-width: 0) and (max-width: 480px) {
-    .container { width: 458px; } /* 15+428+15 */
-    .menu { display: none; }
-    .menu-phone { display: block;}
-    .contacts { display: none; }
+/* Desktop */
+@media screen and (min-width: 901px)  {
+    .container { width: 1158px; } /* 15+1128+15 */
+    .menu { display: block; }
+    .menu-phone { display: none; }
+    .contacts { display: block; }
 }
+
