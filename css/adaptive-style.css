@@ -194,7 +194,7 @@ ol,
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding: 40px;
     background-color: #3f51b5;
     z-index: 999;
 
@@ -219,9 +219,11 @@ ol,
 }
 
 .mobile-menu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 284px;
 }
 
 .mobile-menu .link {
@@ -229,6 +231,17 @@ ol,
     padding: 10px;
     color: #fff;
     text-decoration: none;
+}
+
+ .mobile-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 48px;
+ }
+
+.mobile-social-list { 
+    justify-content: space-between;
 }
 
 /*  */
@@ -843,7 +856,8 @@ ol,
     display: flex;
     gap: 80px; 
 }
-.footer-social-list { 
+.footer-social-list,
+.mobile-social-list { 
     display: flex; 
     gap: 16px;
 }
@@ -927,11 +941,12 @@ ol,
 
 /* «C4» Вёрстка выполнена относительно трёх точек перелома: 480px, 768px и 1200px. */
 
-/* Phone */
+/* Mobile */
 @media screen and (max-width: 480px) {
     .container { width: 458px; } /* 15+428+15 */
     .menu { display: none; }
     .menu-mobile { display: block; }
+    .menu-container { display: block; }
     .contacts { display: none; }
 }
 
@@ -940,6 +955,7 @@ ol,
     .container { width: 798px; } /* 15+768+15 */
     .menu { display: flex; }
     .menu-mobile { display: none; }
+    .menu-container { display: none; }
     .contacts { display: none; }
 }
 
@@ -948,6 +964,7 @@ ol,
     .container { width: 1158px; } /* 15+1128+15 */
     .menu { display: flex; }
     .menu-mobile { display: none; }
+    .menu-container { display: none; }
     .contacts { display: block; }
 }
 
