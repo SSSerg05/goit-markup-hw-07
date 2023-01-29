@@ -195,8 +195,9 @@ ol,
     width: 100vw;
     height: 100vh;
     padding: 40px;
-    background-color: #3f51b5;
+    background-color: var(--color-white);
     z-index: 999;
+    outline: 1px solid red;
 
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -242,6 +243,28 @@ ol,
 
 .mobile-social-list { 
     justify-content: space-between;
+}
+
+.link-mobile-social {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-iris);
+
+    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.link-mobile-social-icon { 
+    width: 24px;
+    height: 24px;
+    fill: var(--color-light);
+}
+
+.link-mobile-social:active,
+.link-mobile-social:focus,
+.link-mobile-social:hover {
+    background-color: red;/*var(--color-btn-active);*/
 }
 
 /*  */
@@ -924,7 +947,7 @@ ol,
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
 
-    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-footer-social-icon { 
     width: 24px;
