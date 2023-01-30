@@ -1,0 +1,229 @@
+:root {
+    --color-iris: #4d5ae5;
+    --color-btn-active: #404bbf;
+    --color-dark: #2e2f42;
+    --color-success: #31d0aa;
+    --color-text: #434455;
+    --color-subtle-text: #8e8f99;
+    --color-accent: #e7e9fc;
+    --color-light: #f4f4fd;
+    --color-white: #fff;
+
+    --fs-logo: 18px;
+    --fs-nav: 16px;
+    --fs-contact: 16px;
+    --fs-btn: 16px;
+    --fs-text: 16px;
+    --fs-title-main: 56px;      /* h1 */
+    --fs-title-block: 36px;     /* h2 */
+    --fs-title-item: 20px;      /* h3 */
+}
+
+/* Hidden html teg/block */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* ========= Site ========= */
+.body {
+    color: var(--color-text);
+    background-color: var(--color-white);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* «C4» Вёрстка выполнена относительно трёх точек 
+перелома: 480px, 768px и 1200px. */
+.container {
+    width: 100%; /* 15 + 450 + 15 = 480 /// 458px 15 + 428 + 15 */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+link {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Clear List */
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+
+/* =========== Text & Title (h1, h2, h3) =========== */
+.title {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* h1 */
+.title-main {
+    font-size: var(--fs-title-main);
+    line-height: 1.07;  /* 60 / 56 = 1.07 */
+    margin-bottom: 48px;
+}
+
+/* h2 */
+.title-block {
+    font-size: var(--fs-title-block);
+    line-height: 1.1;   /* 40 / 36 = 1.1 */
+    margin-bottom: 72px;
+}
+
+/* h3 */
+.title-item {
+    font-size: var(--fs-title-item);
+    line-height: 1.2;  /* 24 / 20 = 1.2 */
+    margin-bottom: 8px;
+}
+
+.title-modal {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;  /* 24 / 16 = 1.5 */
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+/* === Text & Text-Align === */
+.text {
+    margin: 0;
+    font-size: var(--fs-text);   /* 16px; */
+    line-height: 1.5;  /* 24 / 16 = 1.5 */
+}
+
+/* ==== Text for modal-form ==== */
+.sm-text {
+    font-size: 12px;
+    line-height: 1.33; /* 16 / 12 = 1.33 */
+    letter-spacing: 0.04em;
+}
+
+.center { text-align: center; }
+
+
+/* =========== Colors =========== */
+.dark { color: var(--color-dark); }
+.white { color: var(--color-white); }
+.iris { color: var(--irus); }
+.bg-iris { color: var(--color-iris); }
+.bg-light { background-color: var(--color-light); }
+.bg-dark { background-color: var(--color-dark); }
+
+
+/* =========== Logo =========== */
+.logo {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    min-width: 115px;
+}
+
+.logo-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: var(--fs-logo);   /* 18px; */
+    font-weight: 800;
+    line-height: 1.17;            /* 21-24 / 18 = 1.1666 / 1.3 */
+    letter-spacing: 0.03em;
+}
+
+.logo-dark {
+    color: var(--color-dark);
+    text-decoration: inherit;
+}
+
+.logo-light {
+    text-decoration: inherit;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.logo-web {
+    color: var(--color-iris);
+    display: inline-block;
+}
+
+/* =========== Buttons =========== */
+.btn {
+    background-color: var(--color-iris);
+    border: none;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: var(--fs-btn);
+    font-weight: 500;
+    line-height: 1.5;   /* 24 / 16 = 1.5 */
+    letter-spacing: 0.04em;
+
+    min-width: 20px;
+    padding: 16px 32px;
+    cursor: pointer;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:active,
+.btn:focus,
+.btn:hover {
+    background-color: var(--color-btn-active);
+    color: var(--color-white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ====== Main ===== */
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* «C4» Вёрстка выполнена относительно 
+трёх точек перелома: 480px, 768px и 1200px. */
+/* Mobile 480px */
+@media screen and (min-width: 480px) {
+    
+}
+
+/* Mobile 480px */
+@media screen and (min-width: 768px) {
+    
+}
+
+/* Mobile 480px */
+@media screen and (min-width: 1200px) {
+    
+}
