@@ -40,9 +40,7 @@
                             aria-expanded="false"
                             aria-controls="mobile-menu" 
                             >
-                            <svg class="menu-mobile-icon" {
-                                widht="32" 
-                                height="22">
+                            <svg class="menu-mobile-icon-open" width="32" height="22">
                                 <use href="./images/icons-2.svg#icon-ic-baseline-menu"></use>
                             </svg>
                         </button>
@@ -480,7 +478,7 @@
                 </li>
                 <li class="footer-item">
                     <div class="">
-                        <form action="" method="post">
+                        <form method="post">
                             <h3 class="title-footer white">Subscribe</h3>
 
                             <div class="footer-subscribe">
@@ -519,20 +517,20 @@
                 </svg>
             </button>
             
-            <form action="" method="post">
+            <form method="post">
                 <h3 class="title title-modal center dark">Leave your contacts and we will call you back</h3>
                 
                 <!-- Name -->
                 <div class="modal-field">
-                    <label class="sm-text name-field">Name
-                        <div class="modal-input">
+                    <label class="sm-text name-field modal-input">Name
+                        <!-- <div class="modal-input"> -->
                             <input class="sm-text text-field" type="text" name="name" id="name">
                             <span class="icon-text-modal">
                                 <svg class="icon-modal" width="22" height="24">
                                     <use href="./images/icons-2.svg#icon-person"></use>
                                 </svg>
                             </span>
-                        </div>
+                        <!-- </div> -->
                     </label>
                 </div>
                 
@@ -593,25 +591,25 @@
     <!-- mobile-menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
         <button class="btn-menu-toggle js-close-menu">
-            <svg class="menu-mobile-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="8" height="8">
+            <svg class="menu-mobile-icon-close" width="8" height="8">
                 <use href="./images/icons-2.svg#icon-close"></use>
             </svg>
         </button>
     
-        <ul class="list mobile-menu">
-            <li class="menu-item"><a href="./index.html" class="menu-item-link current">Studio</a></li>
-            <li class="menu-item"><a href="./portfolio.html" class="menu-item-link">Portfolio</a></li>
-            <li class="menu-item"><a href="#" class="menu-item-link">Contacts</a></li>
+        <ul class="list mobile-menu-list">
+            <li class=""><a href="./index.html" class="link menu-item-link current">Studio</a></li>
+            <li class=""><a href="./portfolio.html" class="link menu-item-link">Portfolio</a></li>
+            <li class=""><a href="#" class="link menu-item-link">Contacts</a></li>
         </ul>
-
-        <!-- Mobile Contacts -->
-        <ul class="list mobile-contacts">
-            <li class="mobile-contact-phone"><a href="tel:+110001111111" class="contact-item-link">+11 (000) 111-11-11</a></li>
-            <li class="mobile-contact-email"><a href="mailto:info@devstudio.com" class="contact-item-link">info@devstudio.com</a></li>
-        </ul>
-
-        <!-- Mobile Social icons -->
-        <ul class="list mobile-social-list">
+        <div class="">
+            <!-- Mobile Contacts -->
+            <ul class="list mobile-contacts">
+                <li class="mobile-contact-phone"><a href="tel:+110001111111" class="link contact-item-link">+11 (000) 111-11-11</a></li>
+                <li class="mobile-contact-email"><a href="mailto:info@devstudio.com" class="link contact-item-link">info@devstudio.com</a></li>
+            </ul>
+    
+            <!-- Mobile Social icons -->
+            <ul class="list mobile-social-list">
             <li class="mobile-social-item">
                 <!-- instagram -->
                 <a href="" class="link btn-icon link-mobile-social">
@@ -644,7 +642,8 @@
                     </svg>
                 </a>
             </li>
-        </ul>
+            </ul>
+        </div>
     </div>
 
     <script src="./js/mobile-menu.js"></script>

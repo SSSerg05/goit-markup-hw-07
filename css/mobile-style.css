@@ -50,7 +50,7 @@
     margin: 0 auto;
 }
 
-link {
+.link {
     display: inline-block;
     text-decoration: none;
     outline: none;
@@ -127,6 +127,27 @@ link {
 }
 
 .center { text-align: center; }
+
+/* ==== make Current page ==== */
+.current {
+    position: relative;
+    color: var(--color-iris);
+}
+.current::after {
+    content: "";
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-btn-active);
+    border-radius: 2px;
+    
+    margin-bottom: -24px;
+}
 
 
 /* =========== Colors =========== */
@@ -211,14 +232,14 @@ link {
 
 .header-block {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 
@@ -228,15 +249,34 @@ link {
 .menu-container { display: block; }
 .contacts { display: none; }
 
-.btn-menu-toggle {
+
+.menu-mobile {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-mobile-icon-open {
+    /* width: 32px;
+    height: 22px; */
+    fill: #2e2f42;
+}
+
+.btn-menu-toggle {
+    background-color: transparent;
+    padding: 0;
 }
 
 .btn-menu-toggle:hover,
 .btn-menu-toggle:focus {
-    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    background-color: var(--color-btn-active);
 }
-
 
 
 /* === Modal Mobile menu === */
@@ -244,6 +284,11 @@ link {
     position: fixed;
     top: 0;
     left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 100vw;
     height: 100vh;
     padding: 40px;
@@ -266,28 +311,47 @@ link {
 
     color: #fff;
     border-radius: 50%;
+    border: 1px solid var(--color-dark);
 
     height: 24px;
     width: 24px;
 }
 
-.menu-mobile-icon {
+.menu-mobile-icon-close {
+    width: 8px;
+    height: 8px;
     fill: #2e2f42;
 }
 
-.mobile-menu {
+.mobile-menu-list {
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-top: 40px;
-    margin-bottom: 284px;
 }
 
-.mobile-menu .link {
-    display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
+.menu-item-link {
+    font-size: var(--fs-nav); /* 16 */
+    font-weight: 600;
+    color: var(--color-dark);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item-link.current {
+    color: var(--color-iris);
+}
+
+.menu-item-link:active,
+.menu-item-link:focus,
+.menu-item-link:hover { 
+    color: var(--color-iris); 
+}
+
+
+/* ==== Mobile Contacts ==== */
+.contact-item-link {
+    font-size: var(--fs-contact);
 }
 
 .mobile-contacts {
@@ -297,11 +361,41 @@ link {
     margin-bottom: 48px;
 }
 
+.mobile-contact-phone .contact-item-link {
+    font-weight: 600;
+    /* font-size: 36px; */
+    font-size: 7.5vw;
+    /* font-size: calc(36px - (36 - 28) * ((100vw - 350px) / (480-350))); */
+    white-space: nowrap;
+    /* font-size: calc(2em + 4vw); */
+    line-height: 1.11;
+    text-transform: capitalize;
+    color: var(--color-dark);
+}
+
+.mobile-contact-email .contact-item-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-dark);
+}
+
+.contact-item-link:active,
+.contact-item-link:focus,
+.contact-item-link:hover { color: var(--color-iris); }
+
+
 .mobile-social-list {
+    display: flex;
     justify-content: space-between;
 }
 
 .link-mobile-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border: none;
     width: 40px;
     height: 40px;
@@ -320,9 +414,10 @@ link {
 .link-mobile-social:active,
 .link-mobile-social:focus,
 .link-mobile-social:hover {
-    background-color: red;
-    /*var(--color-btn-active);*/
+    background-color: var(--color-btn-active);
 }
+
+
 
 
 /* «C4» Вёрстка выполнена относительно 
