@@ -804,6 +804,7 @@
 .footer {
     padding-top: 96px;
     padding-bottom: 96px;
+    text-align: center;
 }
 
 .footer-card {
@@ -816,6 +817,10 @@
     justify-content: center;
     row-gap: 72px;
     column-gap: 80px;
+}
+
+.footer .text.white {
+    text-align: left;
 }
 
 .footer-social-list,
@@ -909,13 +914,8 @@
 /* «C4» Вёрстка выполнена относительно 
 трёх точек перелома: 480px, 768px и 1200px. */
 /* Mobile 480px */
-@media screen and (min-width: 480px) {
-    .footer {
-        text-align: center;
-    }
-    .text.white {
-        text-align: left;
-    }
+@media screen and (max-width: 480px) {
+
 }
 
 /* Mobile 768px */
