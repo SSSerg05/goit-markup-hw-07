@@ -731,7 +731,7 @@
 .title-team-item {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.20px;
+    line-height: 1.20;
     text-align: center;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
@@ -836,8 +836,8 @@
 
 .footer-subscribe {
     position: relative;
-    width: 453px;
-    display: flex;
+    max-width: 453px;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
     
@@ -991,5 +991,8 @@
     .footer-card {
         width: 264px;
         margin-right: 40px;
+    }
+    .footer-subscribe {
+
     }
 }
