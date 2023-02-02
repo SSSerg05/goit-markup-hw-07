@@ -802,18 +802,20 @@
 
 /* =============== Footer =============== */
 .footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .footer-card {
-    width: 264px;
-    margin-right: 40px;
+    width: 268px;
 }
 
 .footer-list {
     display: flex;
-    gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 72px;
+    column-gap: 80px;
 }
 
 .footer-social-list,
@@ -831,6 +833,9 @@
     position: relative;
     width: 453px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
     gap: 24px;
 }
 
@@ -857,7 +862,6 @@
 .footer-field:focus+.footer-name-field,
 .footer-field:not(:placeholder-shown)+.footer-name-field {
     transform: translateY(-70%);
-
 }
 
 .footer-field:hover,
@@ -906,7 +910,12 @@
 трёх точек перелома: 480px, 768px и 1200px. */
 /* Mobile 480px */
 @media screen and (min-width: 480px) {
-
+    .footer {
+        text-align: center;
+    }
+    .text.white {
+        text-align: left;
+    }
 }
 
 /* Mobile 768px */
@@ -974,5 +983,13 @@
     .customer-icon {
         width: 168px;
         padding: 16px 32px;
+    }
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .footer-card {
+        width: 264px;
+        margin-right: 40px;
     }
 }
