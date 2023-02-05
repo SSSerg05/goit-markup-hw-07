@@ -769,6 +769,7 @@
 
 .customer-card {
     display: flex;
+    max-width: 190px;
 }
 
 .customer-link {
@@ -776,20 +777,21 @@
     align-items: center;
     justify-content: center;
     background-color: var(--color-white);
-
-}
-
-.customer-icon {
-    width: 190px;
+    width: calc(100% - 24px) / 2;
     height: 88px;
-    fill: var(--color-subtle-text);
-    padding: 16px 40px;
-
+    /* padding: 16px 40px; */
     border-radius: 4px;
     outline: 1px solid var(--color-subtle-text);
+    fill: var(--color-subtle-text);
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
         outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-icon {
+    /* fill: var(--color-subtle-text); */
+    width: 110px; 
+    height: 56px;
 }
 
 .customer-link:focus .customer-icon,
