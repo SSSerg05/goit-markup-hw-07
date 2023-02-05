@@ -661,7 +661,10 @@
     column-gap: 24px;
     row-gap: 72px;
     flex-wrap: wrap;
+    /* justify-content: center; */
+    
 }
+
 
 .feature-card {
     display: none;
@@ -767,18 +770,27 @@
     column-gap: 24px;
 }
 
-.customer-card {
-    display: flex;
+.customer-item {
+    width: calc((100% - 24px) /2);
     max-width: 190px;
+    min-width: 110px;
+    height: 88px;
+}
+
+.customer-card {
+    width: 100%;
+    height: 100%;     
 }
 
 .customer-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
+
+    width: 100%;
+    height: 100%;
     background-color: var(--color-white);
-    width: calc(100% - 24px) / 2;
-    height: 88px;
+
     /* padding: 16px 40px; */
     border-radius: 4px;
     outline: 1px solid var(--color-subtle-text);
@@ -913,6 +925,124 @@
     background-color: var(--color-success);
 }
 
+/* ============== PORTFOLIO ============== */
+/* ======================================= */
+/* ===== Filter buttons ==== */
+.filters {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    row-gap: 16px;
+    column-gap: 24px;
+    padding-top: 96px;
+    padding-bottom: 72px;
+}
+
+.btn-filter { 
+    padding: 12px 24px; 
+    color: var(--color-iris);
+    background-color: var(--color-light);
+    /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+.btn-filter:active,
+.btn-filter:focus,
+.btn-filter:hover {
+    color: var(--color-white);
+    background-color: var(--color-iris);
+}
+
+/* =========== Gallery =========== */
+.gallery { padding-top: 0; }
+
+.gallery-list { 
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    /* margin-left: -12px;
+    margin-right: -12px;
+    margin-bottom: -48px; */
+}
+
+.gallery-item {
+    /* flex-basis: calc((100% / 3) - 24px); */
+    /* flex-basis: calc((100% - 24px * 2) / 3); */
+
+    /* margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 48px; */
+    width: 396px;
+    border: 0.5px solid #F4F4FD;
+}
+
+.gallery-item:nth-child(3n){
+    margin-right: 0;
+}
+/* .gallery-item:nth-last-child(-n + 3) {
+	margin-bottom: 0;
+} */
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item-overlay {
+    display: inline-block;
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-iris);
+    padding: 40px 32px;
+    
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-link:hover .gallery-item-overlay { 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-link {
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-link:focus,
+.gallery-link:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+} 
+
+.gallery-image {
+    width: 396px;
+    height: 280px;
+    max-width: 100%;
+    display: block;
+    background-color: var(--color-iris);
+}
+
+.gallery-title-block { 
+    color: var(--color-text);
+    padding: 32px 16px; 
+}
+.gallery-item-text { color: var(--color-white); }
+
+
 /* «C4» Вёрстка выполнена относительно 
 трёх точек перелома: 480px, 768px и 1200px. */
 /* Mobile 480px */
@@ -944,6 +1074,12 @@
     .presentation-bg-image {
         min-height: 603px;
     }
+    .feature-list {
+        justify-content: center;
+    }
+    .feature-item {
+        width: 356px;
+    }
 }
 
 /* Mobile 1200px */
@@ -969,6 +1105,12 @@
     .presentation-bg-image {
         min-height: 603px;
     }
+    .feature-list {
+        justify-content: center;
+    }
+    .feature-item {
+        width: 264px;
+    }
     .feature-card {
         display: flex;
         align-items: center;
@@ -984,7 +1126,7 @@
     }
     .customer-icon {
         width: 168px;
-        padding: 16px 32px;
+        /* padding: 16px 32px; */
     }
     .footer {
         padding-top: 100px;
