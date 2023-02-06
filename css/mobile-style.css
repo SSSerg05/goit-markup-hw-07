@@ -702,8 +702,10 @@
 /* =========== Team-card =========== */
 .team-list {
     display: flex;
+    /* flex-direction: column; */
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     row-gap: 72px;
     column-gap: 24px;
 }
@@ -771,9 +773,7 @@
 }
 
 .customer-item {
-    width: calc((100% - 24px) /2);
-    max-width: 190px;
-    min-width: 110px;
+    width: calc((100% - 24px) / 2);
     height: 88px;
 }
 
@@ -1071,9 +1071,25 @@
         width: 356px;
     }
 
+    .team > .container {
+        width: 766px;
+    }
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .team-item {
+        width: calc((100% - 24px) / 2);
+        margin: 0 auto;
+    }
+
+    .customers > .container {
+        width: 766px;
+    }
     .customer-item {
-        width: calc((100% - 2*24px) / 3);
-        max-width: 168px;
+        width: calc((100% - 2 * 24px) / 3);
     }
     .customer-icon {
         width: 104px;
@@ -1153,9 +1169,22 @@
         width: 64px;
         height: 64px;
     }
+    .team > .container {
+        width: 1158px;
+    }
+    .team-item {
+        width: calc((100% - 3*24px) / 4);
+        margin: 0 auto;
+    }
+
+    .customers > .container {
+        width: 1158px;
+    }
+    .customer-item {
+        width: calc((100% - 5 * 24px) / 6);
+    }
     .customer-icon {
         width: 168px;
-        /* padding: 16px 32px; */
     }
     .footer {
         padding-top: 100px;
