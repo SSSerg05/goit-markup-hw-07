@@ -821,16 +821,21 @@
     text-align: center;
 }
 
-.footer-card {
-    width: 268px;
-}
-
 .footer-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     row-gap: 72px;
     column-gap: 80px;
+}
+
+.footer-card {
+    width: 264px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer .text.white {
@@ -840,6 +845,7 @@
 .footer-social-list,
 .mobile-social-list {
     display: flex;
+    justify-content: center;
     gap: 16px;
 }
 
@@ -850,11 +856,9 @@
 
 .footer-subscribe {
     position: relative;
-    max-width: 453px;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
     gap: 24px;
 }
 
@@ -890,7 +894,7 @@
 
 .btn-subscribe {
     display: inline-flex;
-    min-width: 165px;
+    width: 165px;
     padding: 8px 24px;
     align-items: center;
 }
@@ -1067,6 +1071,29 @@
     .feature-item {
         width: 356px;
     }
+    .footer-list {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: normal;
+        column-gap: 24px;
+    }
+    .footer-card {
+        align-items: normal;
+    }
+    .title-footer {
+        text-align: left;
+    }
+    .footer-field {
+        width: 264px;
+    }
+    .footer-subscribe {
+        max-width: 1158px;
+        flex-wrap: nowrap;
+        justify-content: left;
+    }
+    .btn-subscribe {
+        margin-right: 43px;
+    }
     .filters {
         justify-content: center;
     }
@@ -1131,7 +1158,7 @@
         margin-right: 40px;
     }
     .footer-subscribe {
-
+        flex-wrap: nowrap;
     }
     .filters {
         justify-content: center;
