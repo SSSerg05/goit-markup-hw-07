@@ -1075,7 +1075,7 @@
         width: 766px;
     }
     .team-list {
-        flex-direction: row;
+        /* flex-direction: row; */
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -1095,6 +1095,9 @@
         width: 104px;
     }
 
+    .footer > .container {
+        width: 766px;
+    }
     .footer-list {
         flex-wrap: wrap;
         flex-direction: row;
@@ -1189,6 +1192,9 @@
     .footer {
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+    .footer > .container {
+        width: 1158px;
     }
     .footer-card {
         width: 264px;
