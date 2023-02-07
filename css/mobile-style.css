@@ -274,7 +274,7 @@
     background-color: transparent;
     padding: 0;
     fill: #2e2f42;
-    
+
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -317,21 +317,8 @@
 .menu-container .btn-menu-toggle {
     top: 40px;
     right: 40px;
-
-/* 
-    color: #fff;
-    border-radius: 50%;
-    border: 1px solid var(--color-dark);
-
-    height: 24px;
-    width: 24px; */
 }
-/* 
-.menu-mobile-icon-close {
-    width: 8px;
-    height: 8px;
-    fill: #2e2f42;
-} */
+
 
 .mobile-menu-list {
     display: flex;
@@ -453,8 +440,8 @@
     background-color: var(--color-dark);
     background-image: linear-gradient(
         to right, 
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.7)),
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
         url("../images/people-office-mobile.jpg");
     background-size: cover;
     background-position: center;
@@ -1125,8 +1112,8 @@
     .presentation-bg-image {
         min-height: 436px;
         background-image: linear-gradient(to right,
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)),
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
                 url("../images/people-office-tablet.jpg");
     }
     .features > .container {
@@ -1260,8 +1247,8 @@
     .presentation-bg-image {
         min-height: 603px;
         background-image: linear-gradient(to right,
-                            rgba(0, 0, 0, 0.7),
-                            rgba(0, 0, 0, 0.7)),
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
                         url("../images/people-office-desktop.jpg");
     }
     .features > .container {
@@ -1367,8 +1354,8 @@
        screen and (min-resolution: 2dppx) and (max-width: 767px) {
     .presentation-bg-image {
         background-image: linear-gradient(to right,
-                        rgba(0, 0, 0, 0.7),
-                        rgba(0, 0, 0, 0.7)),
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
                         url("../images/people-office-mobile@2x.jpg");
     }
 }
@@ -1378,8 +1365,8 @@ screen and (min-resolution: 192dpi) and (min-width: 768px),
 screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .presentation-bg-image {
         background-image: linear-gradient(to right,
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)),
+                      rgba(46, 47, 66, 0.7),
+                     rgba(46, 47, 66, 0.7)),
             url("../images/people-office-tablet@2x.jpg");
     }
 }
@@ -1389,8 +1376,8 @@ screen and (min-resolution: 192dpi) and (min-width: 1200px),
 screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     .presentation-bg-image {
         background-image: linear-gradient(to right,
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)),
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
             url("../images/people-office-desktop@2x.jpg");
     }
 }
