@@ -390,6 +390,7 @@
 .mobile-social-list {
     display: flex;
     justify-content: space-between;
+    gap: 56px;
 }
 
 .link-mobile-social {
@@ -833,8 +834,7 @@
     text-align: left;
 }
 
-.footer-social-list,
-.mobile-social-list {
+.footer-social-list {
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -1194,6 +1194,10 @@
     .header{
         padding-bottom: 28px;
     }
+    .header > .container {
+        width: 1158px;
+    }
+
     .title-main {
         font-size: var(--fs-title-main);
         line-height: 1.07;  /* 60 / 56 = 1.07 */
