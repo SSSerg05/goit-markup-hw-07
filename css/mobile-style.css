@@ -934,10 +934,11 @@
     justify-content: left;
     row-gap: 16px;
     column-gap: 24px;
-    padding-top: 96px;
-    padding-bottom: 72px;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
+.three {margin-right: 20px;}
 .btn-filter { 
     padding: 12px 24px; 
     color: var(--color-iris);
@@ -953,21 +954,20 @@
 }
 
 /* =========== Gallery =========== */
-.gallery { padding-top: 0; }
+.gallery { 
+    padding-top: 0; 
+    padding-bottom: 48px;
+}
 
 .gallery-list { 
     display: flex; 
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 24px;
     row-gap: 48px;
 }
 
 .gallery-item {
-    /* flex-basis: calc((100% / 3) - 24px); */
-    /* flex-basis: calc((100% - 24px * 2) / 3); */
-
-    /* width: 100%; */
     border: 0.5px solid #F4F4FD;
 }
 
@@ -1041,6 +1041,14 @@
         width: 426px;
         /* 15 + 190 + 16 + 190 + 15 = 426 */
     }
+    .gallery > .container {
+        width: 426px;
+        /* 15 + 396 + 15 = 426 */
+    }
+    .three {
+        margin-right: 0;
+    }
+
 }
 
 /* Mobile 768px */
@@ -1087,12 +1095,11 @@
         margin-bottom: 48px;
     }
 
-
     /* Sections */
-    .section {
+    /* .section {
         padding-top: 120px;
         padding-bottom: 120px;
-    }
+    } */
     .presentation {
         padding-top: 192px;
         padding-bottom: 192px;
@@ -1156,12 +1163,25 @@
     .btn-subscribe {
         margin-right: 43px;
     }
-    .filters {
-        justify-content: center;
-    }
-    .gallery>.container {
+
+    .gallery > .container {
         width: 766px;
         /* 15 + 356 + 24 + 356 + 15 = 766 */
+    }
+    .gallery {
+        padding-top: 0;
+        padding-bottom: 96px;
+    }
+    .filters {
+        justify-content: center;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    .gallery-list {
+        justify-content: left;
+    }
+    .gallery-item {
+        width: calc((100% - 24px) / 2);
     }
     .gallery-image {
         width: 356px;
@@ -1283,11 +1303,21 @@
     .btn-subscribe {
         margin-right: 0;
     }
-    .filters {
-        justify-content: center;
-    }
+
     .gallery > .container {
         width: 1158px;
+    }
+    .gallery {
+        padding-top: 24px;
+        padding-bottom: 120px;
+    }
+    .filters {
+        justify-content: center;
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+    .gallery-item {
+        width: calc((100% - 2 * 24px) / 3);
     }
     .gallery-image {
         width: 360px;
