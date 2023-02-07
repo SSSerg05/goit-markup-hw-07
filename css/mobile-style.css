@@ -443,7 +443,7 @@
         to right, 
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)),
-        url("../images/people-office.jpg");
+        url("../images/people-office-mobile.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1103,7 +1103,11 @@
         padding-bottom: 192px;
     }
     .presentation-bg-image {
-        min-height: 603px;
+        min-height: 436px;
+        background-image: linear-gradient(to right,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+                url("../images/people-office-tablet.jpg");
     }
     .features > .container {
         width: 766px;
@@ -1227,6 +1231,10 @@
     }
     .presentation-bg-image {
         min-height: 603px;
+        background-image: linear-gradient(to right,
+                            rgba(0, 0, 0, 0.7),
+                            rgba(0, 0, 0, 0.7)),
+                        url("../images/people-office-desktop.jpg");
     }
     .features > .container {
         width: 1158px;
@@ -1320,5 +1328,38 @@
     .gallery-image {
         width: 360px;
         max-height: 300px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+       screen and (min-resolution: 192dpi) and (max-width: 767px),
+       screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .presentation-bg-image {
+        background-image: linear-gradient(to right,
+                        rgba(0, 0, 0, 0.7),
+                        rgba(0, 0, 0, 0.7)),
+                        url("../images/people-office-mobile@2x.jpg");
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .presentation-bg-image {
+        background-image: linear-gradient(to right,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("../images/people-office-tablet@2x.jpg");
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (min-resolution: 192dpi) and (min-width: 1200px),
+screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .presentation-bg-image {
+        background-image: linear-gradient(to right,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+            url("../images/people-office-desktop@2x.jpg");
     }
 }
