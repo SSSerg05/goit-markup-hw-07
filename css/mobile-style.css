@@ -78,6 +78,7 @@
     
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 /* h2 */
 .title-block {
@@ -132,7 +133,8 @@
 .center { text-align: center; }
 
 /* ==== make Current page ==== */
-.current {
+.current,
+.mobile-current {
     position: relative;
     color: var(--color-iris);
 }
@@ -271,11 +273,19 @@
 .btn-menu-toggle {
     background-color: transparent;
     padding: 0;
+    fill: #2e2f42;
+    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-menu-toggle:hover,
+.btn-menu-toggle:hover .menu-mobile-icon-open,
+.btn-menu-toggle:focus .menu-mobile-icon-open {
+    fill: var(--color-white);
+}
+.btn-menu-toggle:hover ,
 .btn-menu-toggle:focus {
-    background-color: var(--color-btn-active);
+    background-color: var(--color-iris);
 }
 
 
@@ -305,23 +315,23 @@
 }
 
 .menu-container .btn-menu-toggle {
-    position: absolute;
     top: 40px;
     right: 40px;
 
+/* 
     color: #fff;
     border-radius: 50%;
     border: 1px solid var(--color-dark);
 
     height: 24px;
-    width: 24px;
+    width: 24px; */
 }
-
+/* 
 .menu-mobile-icon-close {
     width: 8px;
     height: 8px;
     fill: #2e2f42;
-}
+} */
 
 .mobile-menu-list {
     display: flex;
@@ -341,7 +351,7 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-item-link.current {
+.menu-item-link.mobile-current {
     color: var(--color-iris);
 }
 
@@ -388,9 +398,11 @@
 
 
 .mobile-social-list {
+    width: 356px;
     display: flex;
     justify-content: space-between;
     gap: 56px;
+    margin: 0 auto;
 }
 
 .link-mobile-social {
@@ -450,7 +462,6 @@
 }
 
 .btn-main { 
-    margin-top: 72px;
     line-height: 1.2; /* 19 /16 = 1.2 */
 } 
 
@@ -1029,6 +1040,12 @@
 трёх точек перелома: 480px, 768px и 1200px. */
 /* Mobile 480px */
 @media screen and (min-width: 480px) {
+    .header > .container {
+        width: 426px; 
+    }
+    .features > .container {
+        width: 426px;
+    }
     .team > .container {
         width: 426px; 
         /* 15 + 396 + 15 = 426 */
@@ -1038,6 +1055,10 @@
         /* 15 + 190 + 16 + 190 + 15 = 426 */
     }
     .gallery > .container {
+        width: 426px;
+        /* 15 + 396 + 15 = 426 */
+    }
+    .footer > .container {
         width: 426px;
         /* 15 + 396 + 15 = 426 */
     }
@@ -1052,6 +1073,11 @@
     .header{
         padding-bottom: 10px;
     }
+
+    .header > .container {
+        width: 766px; 
+    }
+
     .menu-mobile,
     .menu-container {
         display: none;
@@ -1088,17 +1114,13 @@
     .title-main {
         font-size: var(--fs-title-main);
         line-height: 1.07;  /* 60 / 56 = 1.07 */
-        margin-bottom: 48px;
+        margin-bottom: 40px;
     }
 
     /* Sections */
-    /* .section {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    } */
     .presentation {
-        padding-top: 192px;
-        padding-bottom: 192px;
+        padding-top: 108px;
+        padding-bottom: 108px;
     }
     .presentation-bg-image {
         min-height: 436px;
@@ -1116,6 +1138,9 @@
     }
     .feature-item {
         width: 356px;
+    }
+    .title-feature-item {
+        text-align: left; 
     }
 
     .team > .container {
@@ -1138,12 +1163,13 @@
     }
 
     .footer > .container {
-        width: 766px;
+        width: 582px;
     }
     .footer-list {
         flex-wrap: wrap;
         flex-direction: row;
         align-items: normal;
+        justify-content: left;
         column-gap: 24px;
     }
     .footer-card {
@@ -1228,8 +1254,8 @@
         padding-bottom: 120px;
     }
     .presentation {
-        padding-top: 192px;
-        padding-bottom: 192px;
+        padding-top: 188px;
+        padding-bottom: 188px;
     }
     .presentation-bg-image {
         min-height: 603px;
@@ -1250,7 +1276,6 @@
         line-height: 1.20;
         letter-spacing: 0.02em;
 
-        text-align: left;
         margin-top: 8px;
         margin-bottom: 8px;
     }
@@ -1272,6 +1297,7 @@
     }
     .products {
         display: block;
+        padding-top: 0;
     }
     .products > .container {
         width: 1158px;
