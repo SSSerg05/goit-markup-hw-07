@@ -801,13 +801,17 @@
     height: 56px;
 }
 
-.customer-link:focus .customer-icon,
+/* .customer-link:focus .customer-icon,
 .customer-link:active .customer-icon,
 .customer-link:hover .customer-icon {
     fill: var(--color-iris);
+} */
+.customer-link:focus,
+.customer-link:active,
+.customer-link:hover {
+    fill: var(--color-iris);
     outline: 1px solid var(--color-iris);
 }
-
 
 /* =============== Footer =============== */
 .footer {
