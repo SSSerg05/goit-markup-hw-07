@@ -369,9 +369,7 @@
     font-weight: 600;
     /* font-size: 36px; */
     font-size: 7.5vw;
-    /* font-size: calc(36px - (36 - 28) * ((100vw - 350px) / (480-350))); */
     white-space: nowrap;
-    /* font-size: calc(2em + 4vw); */
     line-height: 1.11;
     text-transform: capitalize;
     color: var(--color-dark);
@@ -659,8 +657,6 @@
     column-gap: 24px;
     row-gap: 72px;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    
 }
 
 
@@ -675,8 +671,10 @@
 
 .product-list {
     display: flex;
-    row-gap: 24px;
-    column-gap: 72px;
+    flex-wrap: nowrap;
+    /* row-gap: 24px;
+    column-gap: 72px; */
+    column-gap: 24px;
 }
 
 .product-card {
@@ -1034,12 +1032,14 @@
 /* «C4» Вёрстка выполнена относительно 
 трёх точек перелома: 480px, 768px и 1200px. */
 /* Mobile 480px */
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
     .team > .container {
-        width: 426px; /* 15 + 396 + 15 */
+        width: 426px; 
+        /* 15 + 396 + 15 = 426 */
     }
     .customers > .container {
         width: 426px;
+        /* 15 + 190 + 16 + 190 + 15 = 426 */
     }
 }
 
@@ -1100,8 +1100,9 @@
     .presentation-bg-image {
         min-height: 603px;
     }
-    .feature > .container {
+    .features > .container {
         width: 766px;
+        /* 15 + 356 + 24 + 356 + 15 = 766 */
     }
     .feature-list {
         justify-content: center;
@@ -1111,15 +1112,13 @@
     }
 
     .team > .container {
-        width: 766px;
-    }
-
-    .team-item {
-        /* width: calc((100% - 24px) / 2); */
+        width: 582px;
+        /* 15 + 264 + 24 + 264 + 15 = 582 */
     }
 
     .customers > .container {
-        width: 766px;
+        width: 582px;
+        /* 15 + 168 +24 + 168 + 24 + 168 + 15 = 582 */
     }
     .customer-item {
         width: calc((100% - 2 * 24px) / 3);
@@ -1159,6 +1158,10 @@
     }
     .filters {
         justify-content: center;
+    }
+    .gallery>.container {
+        width: 766px;
+        /* 15 + 356 + 24 + 356 + 15 = 766 */
     }
     .gallery-image {
         width: 356px;
@@ -1207,6 +1210,9 @@
     .presentation-bg-image {
         min-height: 603px;
     }
+    .features > .container {
+        width: 1158px;
+    }
     .feature-list {
         justify-content: center;
     }
@@ -1236,7 +1242,9 @@
         width: 64px;
         height: 64px;
     }
-
+    .products {
+        display: block;
+    }
     .team > .container {
         width: 1158px;
     }
@@ -1260,15 +1268,26 @@
     .footer > .container {
         width: 1158px;
     }
+
+    .footer-list {
+        column-gap: 80px;
+    }
     .footer-card {
         width: 264px;
         margin-right: 40px;
     }
+
     .footer-subscribe {
         flex-wrap: nowrap;
     }
+    .btn-subscribe {
+        margin-right: 0;
+    }
     .filters {
         justify-content: center;
+    }
+    .gallery > .container {
+        width: 1158px;
     }
     .gallery-image {
         width: 360px;
