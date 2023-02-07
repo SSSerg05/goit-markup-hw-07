@@ -1270,6 +1270,9 @@
     .products {
         display: block;
     }
+    .products > .container {
+        width: 1158px;
+    }
     .team > .container {
         width: 1158px;
     }
