@@ -671,8 +671,7 @@
 .product-list {
     display: flex;
     flex-wrap: nowrap;
-    /* row-gap: 24px;
-    column-gap: 72px; */
+    justify-content: center;
     column-gap: 24px;
 }
 
