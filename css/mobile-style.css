@@ -796,16 +796,10 @@
 }
 
 .customer-icon {
-    /* fill: var(--color-subtle-text); */
     width: 110px; 
     height: 56px;
 }
 
-/* .customer-link:focus .customer-icon,
-.customer-link:active .customer-icon,
-.customer-link:hover .customer-icon {
-    fill: var(--color-iris);
-} */
 .customer-link:focus,
 .customer-link:active,
 .customer-link:hover {
@@ -1055,7 +1049,7 @@
 
 }
 
-/* Mobile 768px */
+/* Tablet 768px */
 @media screen and (min-width: 768px) {
     .header{
         padding-bottom: 10px;
@@ -1193,7 +1187,7 @@
     }
 }
 
-/* Mobile 1200px */
+/* Desktop 1200px */
 @media screen and (min-width: 1200px) {
     .header{
         padding-bottom: 28px;
